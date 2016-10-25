@@ -26,7 +26,7 @@ namespace VkNet.Enums.Filters
         /// <summary>
         /// Для получения поля <see cref="User.Sex"/>.
         /// </summary>
-        public static readonly ProfileFields Sex = RegisterPossibleValue(1L << 3, "sex");
+        //public static readonly ProfileFields Sex = RegisterPossibleValue(1L << 3, "sex");
 
         /// <summary>
         /// Для получения поля <see cref="User.BirthDate"/>.
@@ -37,6 +37,11 @@ namespace VkNet.Enums.Filters
         /// Для получения поля <see cref="User.City"/>.
         /// </summary>
         public static readonly ProfileFields City = RegisterPossibleValue(1L << 5, "city");
+
+        /// <summary>
+		/// Для получения дополнительного поля <see cref="User.HomeTown"/>.
+		/// </summary>
+		public static readonly ProfileFields HomeTown = RegisterPossibleValue(1L << 3, "home_town");
 
         /// <summary>
         /// Для получения поля <see cref="User.Country"/>.
@@ -326,7 +331,7 @@ namespace VkNet.Enums.Filters
         /// <summary>
         /// Для получения всех документированных полей.
         /// </summary>
-        public static readonly ProfileFields All = Uid | FirstName | LastName | Sex | BirthDate | City | Country | Photo50 | Photo100 |
+        public static readonly ProfileFields All = Uid | FirstName | LastName | BirthDate | City | Country | Photo50 | Photo100 |
             Photo200 | Photo200Orig | Photo400Orig | PhotoMax | PhotoMaxOrig | Online | FriendLists | Domain | HasMobile | Contacts |
             Connections | Site | Education | Universities | Schools | CanPost | CanSeeAllPosts | CanSeeAudio | CanWritePrivateMessage |
             Status | LastSeen | CommonCount | Relation | Relatives | Counters | Nickname | Timezone | Verified | WallComments | CanSendFriendRequest |

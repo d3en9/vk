@@ -1254,7 +1254,7 @@ namespace VkNet.Tests.Categories
             var cat = GetMockedUsersCategory(url, json);
 
 			var screenNames = new [] {"dm", "durov"};
-            var fields = ProfileFields.FirstName | ProfileFields.LastName | ProfileFields.Sex | ProfileFields.City;
+            var fields = ProfileFields.FirstName | ProfileFields.LastName | ProfileFields.City;
 			var users = cat.Get(screenNames, fields, NameCase.Gen, false);
 
 			Assert.That(users, Is.Not.Null);
@@ -1302,7 +1302,7 @@ namespace VkNet.Tests.Categories
 
             var cat = GetMockedUsersCategory(url, json);
 
-			var fields = ProfileFields.FirstName | ProfileFields.LastName | ProfileFields.Sex | ProfileFields.City;
+			var fields = ProfileFields.FirstName | ProfileFields.LastName | ProfileFields.City;
             var user = cat.Get("dm", fields, NameCase.Gen, false);
 
 			Assert.That(user, Is.Not.Null);
